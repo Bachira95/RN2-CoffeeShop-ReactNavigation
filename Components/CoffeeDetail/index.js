@@ -40,7 +40,8 @@ class CoffeeDetail extends Component {
     });
 
   render() {
-    const coffeeshop = coffeeshops[0];
+    const coffeeshop = this.props.route.params.coffeeshop; //it recievs a parameter route by default and has params inside of it is the coffeeshop
+    // it receivs route becaude it has benn rendered as Screen
     return (
       <Container>
         <Content>

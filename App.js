@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-import { Spinner, Header, Container } from "native-base";
+import { Spinner } from "native-base";
 
-// Components
-import Login from "./Components/Authentication/Login";
-import Signup from "./Components/Authentication/Signup";
-import CoffeeList from "./Components/CoffeeList";
-import CoffeeDetail from "./Components/CoffeeDetail";
-import CoffeeCart from "./Components/CoffeeCart";
+import RootNavigator from "./Components/Navigation";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default class App extends Component {
   state = {
@@ -26,10 +22,9 @@ export default class App extends Component {
       return <Spinner color="#132D4B" />;
     }
     return (
-      <Container>
-        <Header />
-        <Login />
-      </Container>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
     );
   }
 }
